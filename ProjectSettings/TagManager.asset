@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Portal
+  - Loot
   layers:
   - Default
   - TransparentFX
@@ -13,10 +14,10 @@ TagManager:
   - Postpossesing
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - drop
+  - player
+  - enemy
+  - attractor
   - 
   - 
   - 
@@ -43,8 +44,8 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 1812968991
+  - name: Loot
+    uniqueID: 3365840479
     locked: 0
   - name: Floor
     uniqueID: 171263163
@@ -54,4 +55,10 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 1990895049
+    locked: 0
+  - name: Player
+    uniqueID: 1812968991
+    locked: 0
+  - name: attractor
+    uniqueID: 1111083859
     locked: 0
