@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement; // thư viện có chức năng load được
 
 public class MainMenu : MonoBehaviour
 {
-    public void PLayGame()
+    public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);//Khi nhấn vào sẽ load scene village
     }

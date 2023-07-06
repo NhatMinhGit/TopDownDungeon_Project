@@ -42,6 +42,6 @@ public class Item : MonoBehaviour
                 Vector3.Lerp(startScale, endScale, currentTime / duration);
             yield return null;
         }
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 }

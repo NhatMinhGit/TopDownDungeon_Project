@@ -5,7 +5,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : Singleton<PlayerController>
 {
-   
+    [SerializeField] GameObject dieMenu;
+
+    [SerializeField] PlayerData _playerData;
 
     public float moveSpeed = 1f;
 
@@ -28,10 +30,11 @@ public class PlayerController : Singleton<PlayerController>
 
     bool canMove = true;
 
-    
 
-   // [SerializeField] List<ItemBase> ItemsEquipped = new List<ItemBase>();
-    
+
+
+    // [SerializeField] List<ItemBase> ItemsEquipped = new List<ItemBase>();
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +48,7 @@ public class PlayerController : Singleton<PlayerController>
         // khai báo spriteRenderer là component SpriteRenderer
         spriteRenderer = GetComponent<SpriteRenderer>();
 
+        _playerData.currentHealth = _playerData.maxHealth;
     }
 
 
@@ -88,6 +92,11 @@ public class PlayerController : Singleton<PlayerController>
             }
         }
         
+        Debug.LogError(_playerData.currentHealth);
+        if(_playerData.currentHealth <= 0)
+        {
+            dieMenu.SetActive(true);
+        }
     }
 
 
@@ -121,6 +130,8 @@ public class PlayerController : Singleton<PlayerController>
         }
     }
 
+
+
     void OnMove(InputValue movementValue)
     {
         movementInput = movementValue.Get<Vector2>();
@@ -131,7 +142,7 @@ public class PlayerController : Singleton<PlayerController>
     {
         animator.SetTrigger("swordAttack");
     }
-    
+
     public void SwordAttack()
     {
         LockMovement();

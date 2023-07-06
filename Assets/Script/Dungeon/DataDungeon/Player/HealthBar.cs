@@ -13,15 +13,15 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ChangeSliderValue(_playerHealthData.currentHealth);
+        ChangeSliderValue(_playerHealthData.maxHP);
     }
     private void Update()
     {
-        ChangeSliderValue(_playerHealthData.currentHealth);
+        ChangeSliderValue(_playerHealthData.currentHP);
     }
     internal void AddHealth(int value)
     {
-        _playerHealthData.currentHealth += value;
+        _playerHealthData.currentHP += value;
     }
 
     private void ChangeSliderValue(float amount)

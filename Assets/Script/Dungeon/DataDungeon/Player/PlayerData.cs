@@ -7,5 +7,5 @@ public class PlayerData : ScriptableObject
     // Start is called before the first frame update
     public float maxHealth = 5;
     public float damage = 1;
-    
+    public float currentHealth { get; set; }
 }

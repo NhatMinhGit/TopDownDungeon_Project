@@ -11,7 +11,7 @@ public class SwordAttack : MonoBehaviour
     [SerializeField] PlayerData _playerData;
 
     [SerializeField] EnemyData _enemyData;
-    public float dmg;
+    float dmg;
     float EnemyHealth;
     public static float currentEHP;
     

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1737889799382376201}
   - component: {fileID: 1737889799382376203}
   - component: {fileID: 1737889799382376202}
+  - component: {fileID: 2043382437686174487}
   m_Layer: 0
   m_Name: SpawnPoint (3)
   m_TagString: SpawnPoint
@@ -58,7 +59,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.08006224, y: -0.080191605}
@@ -74,6 +75,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16082042, y: 0.16094564}
   m_EdgeRadius: 0
+--- !u!50 &2043382437686174487
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737889799382376200}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1737889799483236909
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,6 +107,7 @@ GameObject:
   - component: {fileID: 1737889799483236910}
   - component: {fileID: 1737889799483236911}
   - component: {fileID: 1737889799483236896}
+  - component: {fileID: 2282781641909621473}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: SpawnPoint
@@ -132,7 +155,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.08006224, y: -0.080191605}
@@ -148,6 +171,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16082042, y: 0.16094564}
   m_EdgeRadius: 0
+--- !u!50 &2282781641909621473
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737889799483236909}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1737889799706481957
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +203,7 @@ GameObject:
   - component: {fileID: 1737889799706481958}
   - component: {fileID: 1737889799706481976}
   - component: {fileID: 1737889799706481959}
+  - component: {fileID: 8954956205270576576}
   m_Layer: 0
   m_Name: SpawnPoint (2)
   m_TagString: SpawnPoint
@@ -206,7 +251,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.08006224, y: -0.080191605}
@@ -222,6 +267,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16082042, y: 0.16094564}
   m_EdgeRadius: 0
+--- !u!50 &8954956205270576576
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737889799706481957}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1737889799922038565
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,6 +299,7 @@ GameObject:
   - component: {fileID: 1737889799922038566}
   - component: {fileID: 1737889799922038584}
   - component: {fileID: 1737889799922038567}
+  - component: {fileID: 4990172782095882273}
   m_Layer: 0
   m_Name: SpawnPoint (1)
   m_TagString: SpawnPoint
@@ -280,7 +347,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.08006224, y: -0.080191605}
@@ -296,6 +363,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16082042, y: 0.16094564}
   m_EdgeRadius: 0
+--- !u!50 &4990172782095882273
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737889799922038565}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1737889800491248673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1771,7 +1859,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

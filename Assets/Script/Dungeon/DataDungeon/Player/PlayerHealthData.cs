@@ -7,22 +7,28 @@ using UnityEngine.UI;
 [CreateAssetMenu]
 public class PlayerHealthData : ScriptableObject
 {
-    public float currentHealth;
-
+    public float currentHP,maxHP;
     [SerializeField] PlayerData _playerData;
     // Update is called once per frame
     [System.NonSerialized]
     public UnityEvent<float> healthChangeEvent;
 
+
     private void OnEnable()
     {
-        currentHealth = _playerData.maxHealth-5;
+        maxHP = _playerData.maxHealth;
+        currentHP = _playerData.maxHealth;
         if (healthChangeEvent == null)
             healthChangeEvent = new UnityEvent<float>();
     }
+    
     public void DecreaseHealth(float amount)
     {
-        currentHealth -= amount;
-        healthChangeEvent.Invoke(currentHealth);
+        currentHP -= amount;
+        healthChangeEvent.Invoke(_playerData.currentHealth);
+        _playerData.currentHealth = currentHP;
+        Debug.Log(_playerData.currentHealth);
     }
+
+    
 }

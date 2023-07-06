@@ -14,7 +14,9 @@ public class HealthDecreaseTrigger : MonoBehaviour
     private void Awake()
     {
         EnemyDamage = _enemyData.dmg;
+
     }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))

@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public float Health;
     public float Damage;
     [SerializeField] GameObject player;
+    [SerializeField] GameObject portal;
     Rigidbody2D rigi;
     
     [SerializeField]  EnemyData _enemyData;
@@ -28,7 +29,7 @@ public class Enemy : MonoBehaviour
 
         animator = this.gameObject.GetComponent<Animator>();
         player = GameObject.FindObjectOfType<PlayerController>().gameObject;
-        rigi = this.gameObject.GetComponent<Rigidbody2D>();
+        //rigi = this.gameObject.GetComponent<Rigidbody2D>();
 
     }
     private void Update()
@@ -57,7 +58,9 @@ public class Enemy : MonoBehaviour
         {
             Defeated();
             Die();
+            SpawnPortal();
         }
+        
     }
 
     public void Move()
@@ -75,9 +78,13 @@ public class Enemy : MonoBehaviour
         animator.SetTrigger("Defeated");
     }
 
+    public void SpawnPortal()
+    {
+        Instantiate(portal, transform.position, Quaternion.identity);
+    }
     public void Die()
     {
-        GetComponent<LootBag>().SpawnLoot(this.transform.position);
+        //GetComponent<LootBag>().SpawnLoot(this.transform.position);
         Destroy(gameObject);
     }
 }
