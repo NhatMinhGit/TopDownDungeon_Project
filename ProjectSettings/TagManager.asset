@@ -9,6 +9,8 @@ TagManager:
   - Loot
   - SpawnPoint
   - Rooms
+  - Boss
+  - Sword
   layers:
   - Default
   - TransparentFX

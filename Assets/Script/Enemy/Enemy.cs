@@ -7,16 +7,16 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     Animator animator;
-    public float Health;
-    public float Damage;
+    private float Health;
+    private float Damage;
     [SerializeField] GameObject player;
     [SerializeField] GameObject portal;
     Rigidbody2D rigi;
     
     [SerializeField]  EnemyData _enemyData;
-    [SerializeField] float speedEnemy;
-    [SerializeField] float detectRadius;
-    [SerializeField] float attackRadius;
+    float speedEnemy;
+    float detectRadius;
+    float attackRadius;
 
     float distance;
     private void Start()
@@ -24,12 +24,15 @@ public class Enemy : MonoBehaviour
         speedEnemy = _enemyData.speed;
         detectRadius = _enemyData.detectRadius;
         attackRadius = _enemyData.attackRadius;
+        Damage = _enemyData.dmg;
+        Health = _enemyData.hp;
         Health = SwordAttack.currentEHP;
         Debug.Log(Health);
 
         animator = this.gameObject.GetComponent<Animator>();
         player = GameObject.FindObjectOfType<PlayerController>().gameObject;
         //rigi = this.gameObject.GetComponent<Rigidbody2D>();
+        
 
     }
     private void Update()
@@ -54,11 +57,16 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         Health -= damage;
-        if (Health <= 0)
+        if (Health <= 0 || gameObject.name == "Boss")
         {
             Defeated();
             Die();
             SpawnPortal();
+        }
+        else
+        {
+            Defeated();
+            Die();
         }
         
     }

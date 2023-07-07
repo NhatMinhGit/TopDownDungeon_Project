@@ -13,7 +13,9 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ChangeSliderValue(_playerHealthData.maxHP);
+        _playerHealthData.currentHP = _playerHealthData.maxHP;
+        ChangeSliderValue(_playerHealthData.currentHP);
+        //Debug.Log(_playerHealthData.maxHP);
     }
     private void Update()
     {

@@ -9,17 +9,20 @@ public class HealthDecreaseTrigger : MonoBehaviour
 
     [SerializeField] PlayerHealthData _playerHealthData;
 
+    
     private float EnemyDamage;
     // Update is called once per frame
     private void Awake()
     {
         EnemyDamage = _enemyData.dmg;
-
     }
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") || other.CompareTag("Boss"))
+        {
             _playerHealthData.DecreaseHealth(EnemyDamage);
+            
+        }    
     }
 }

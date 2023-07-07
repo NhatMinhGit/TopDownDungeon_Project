@@ -17,7 +17,7 @@ public class EnterPortal : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.tag == "Player")
         {
             if (SceneManager.GetActiveScene().name == "Village")
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

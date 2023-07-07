@@ -13,7 +13,6 @@ public class PlayerHealthData : ScriptableObject
     [System.NonSerialized]
     public UnityEvent<float> healthChangeEvent;
 
-
     private void OnEnable()
     {
         maxHP = _playerData.maxHealth;
@@ -27,7 +26,7 @@ public class PlayerHealthData : ScriptableObject
         currentHP -= amount;
         healthChangeEvent.Invoke(_playerData.currentHealth);
         _playerData.currentHealth = currentHP;
-        Debug.Log(_playerData.currentHealth);
+        //Debug.Log(_playerData.currentHealth);
     }
 
     

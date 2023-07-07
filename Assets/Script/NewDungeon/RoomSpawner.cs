@@ -30,22 +30,22 @@ public class RoomSpawner : MonoBehaviour {
 				// Need to spawn a room with a BOTTOM door.
 				rand = Random.Range(0, templates.bottomRooms.Length);
 				Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
-				Debug.Log("Bot");
+				//Debug.Log("Bot");
 			} else if(openingDirection == 2){
 				// Need to spawn a room with a TOP door.
 				rand = Random.Range(0, templates.topRooms.Length);
 				Instantiate(templates.topRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
-				Debug.Log("Top");
+				//Debug.Log("Top");
 			} else if(openingDirection == 3){
 				// Need to spawn a room with a LEFT door.
 				rand = Random.Range(0, templates.leftRooms.Length);
 				Instantiate(templates.leftRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
-				Debug.Log("Left");
+				//Debug.Log("Left");
 			} else if(openingDirection == 4){
 				// Need to spawn a room with a RIGHT door.
 				rand = Random.Range(0, templates.rightRooms.Length);
 				Instantiate(templates.rightRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
-				Debug.Log("Right");
+				//Debug.Log("Right");
 			}
 			spawned = true;
 		}

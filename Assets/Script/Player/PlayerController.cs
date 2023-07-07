@@ -92,7 +92,7 @@ public class PlayerController : Singleton<PlayerController>
             }
         }
         
-        Debug.LogError(_playerData.currentHealth);
+        //Debug.LogError(_playerData.currentHealth);
         if(_playerData.currentHealth <= 0)
         {
             dieMenu.SetActive(true);

@@ -7,6 +7,8 @@ public class SwordAttack : MonoBehaviour
     public Collider2D swordCollider;
     Vector2 rightAttackOffset;
 
+    public GameObject player;
+
     //Singleton 
     [SerializeField] PlayerData _playerData;
 
@@ -22,24 +24,28 @@ public class SwordAttack : MonoBehaviour
     {
         dmg = _playerData.damage;
         EnemyHealth = _enemyData.hp;
-        rightAttackOffset = transform.position;
-        Debug.Log(dmg);
+        
+        //Debug.Log(dmg);
+    }
+    private void Update()
+    {
+        rightAttackOffset = player.transform.position;
     }
 
 
 
-  
     public void AttackRight()//Khi di chuyển sang phải thì rightAttackOffset sẽ dương  
     {
         print("Right");
         swordCollider.enabled = true;
-        transform.localPosition = rightAttackOffset;
+        transform.localPosition = new Vector3 (rightAttackOffset.x + (float)0.4, rightAttackOffset.y);
     }
     public void AttackLeft()//Khi di chuyển sang phải thì rightAttackOffset sẽ âm
     {
         print("Left");
         swordCollider.enabled = true;
-        transform.localPosition = new Vector3(rightAttackOffset.x * -1, rightAttackOffset.y);
+        transform.localPosition = new Vector3( rightAttackOffset.x - (float)0.4, rightAttackOffset.y);
+        //Debug.Log(transform.localPosition);
     }
 
 
@@ -51,10 +57,10 @@ public class SwordAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) //Khi chém trúng Enemy thì Enemy sẽ bị trừ damage
     {
-        if(other.tag == "Enemy")
+        if(other.tag == "Enemy" || other.tag == "Boss")
         {
             other.gameObject.GetComponent<Enemy>().TakeDamage(dmg);
-            Debug.Log(dmg);
+            //Debug.Log(dmg);
         }
         currentEHP = EnemyHealth;
 

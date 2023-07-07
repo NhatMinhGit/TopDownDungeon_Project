@@ -16,4 +16,4 @@ MonoBehaviour:
   dmg: 1
   speed: 0.5
   detectRadius: 0.7
-  attackRadius: 0.2
+  attackRadius: 0.1
