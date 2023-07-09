@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 6534053439828880155}
   - component: {fileID: 6534053439828880152}
   - component: {fileID: 6534053439828880153}
+  - component: {fileID: 5698764834233518647}
   m_Layer: 8
   m_Name: Boss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 1990895049
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1083815700, guid: 5fb0f3967d7064a44bcbe0b868a5562e, type: 3}
+  m_Sprite: {fileID: 1512370965, guid: cf5c8412b7fec5748be93dcdebbd4881, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +99,7 @@ Animator:
   m_GameObject: {fileID: 2052734943707355800}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eacd8e2f560daa94ba08f889abf7d5a4, type: 2}
+  m_Controller: {fileID: 9100000, guid: a901d7e9363a48b4f8602ad1dbda482f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -142,9 +143,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.019986704}
-  m_Size: {x: 0.1601066, y: 0.1601066}
-  m_Direction: 0
+  m_Offset: {x: -0.008220154, y: -0.26561272}
+  m_Size: {x: 0.23134828, y: 0.16206475}
+  m_Direction: 1
 --- !u!114 &6534053439828880153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,4 +160,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1054543793713698326, guid: a4dea6c29ed64694baef38426388c4d7, type: 3}
   portal: {fileID: 7586948141576755414, guid: 6b1362efcad260642a40a3a59560e484, type: 3}
-  _enemyData: {fileID: 11400000, guid: 25c28c092cdc79b4fb77e3f35dc47809, type: 2}
+  _enemyData: {fileID: 11400000, guid: ac0a56edbe58ed949b322c0ca4807b05, type: 2}
+--- !u!114 &5698764834233518647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052734943707355800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8981140f8752841b2335dc82c0d5c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedItemPrefab: {fileID: 934855421590841986, guid: 355aec8494cf0104c9da3420771432ff, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: f89398fdda0b85444bd1671d6c09121d, type: 2}
+  - {fileID: 11400000, guid: 702b324b5bbc132499dc85b0dbba91cc, type: 2}
+  - {fileID: 11400000, guid: 88e1ec548b50efe4584ebf3030afe32c, type: 2}
+  - {fileID: 11400000, guid: 4473312880328e34ba060681479bbea5, type: 2}
+  - {fileID: 11400000, guid: 8009754ac3acc9844af1402355fdc3cc, type: 2}
+  - {fileID: 11400000, guid: 86b7784c486710c4f905b12f6820fbc3, type: 2}
+  - {fileID: 11400000, guid: 5b77840fc0afe1d4bbca12062c6d8ca2, type: 2}
+  - {fileID: 11400000, guid: 61d1551fe78438e4eb44e9d84e43032a, type: 2}

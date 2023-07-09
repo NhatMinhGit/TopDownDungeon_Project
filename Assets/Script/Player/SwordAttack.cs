@@ -38,13 +38,13 @@ public class SwordAttack : MonoBehaviour
     {
         print("Right");
         swordCollider.enabled = true;
-        transform.localPosition = new Vector3 (rightAttackOffset.x + (float)0.4, rightAttackOffset.y);
+        transform.localPosition = new Vector3 (rightAttackOffset.x + (float)0.08, rightAttackOffset.y);
     }
     public void AttackLeft()//Khi di chuyển sang phải thì rightAttackOffset sẽ âm
     {
         print("Left");
         swordCollider.enabled = true;
-        transform.localPosition = new Vector3( rightAttackOffset.x - (float)0.4, rightAttackOffset.y);
+        transform.localPosition = new Vector3( rightAttackOffset.x - (float)0.08, rightAttackOffset.y);
         //Debug.Log(transform.localPosition);
     }
 

@@ -18,7 +18,7 @@ MonoBehaviour:
   <Description>k__BackingField: heal +2hp
   <ItemImage>k__BackingField: {fileID: -1385870513, guid: 5ec2f5e2117e69548b329df96968b91a, type: 3}
   <DefaultParametersList>k__BackingField: []
-  <dropChance>k__BackingField: 95
+  <dropChance>k__BackingField: 80
   modifiersData:
   - statModifier: {fileID: 11400000, guid: 372c74332c756a44ea9f00579e8c54ce, type: 2}
     value: 2

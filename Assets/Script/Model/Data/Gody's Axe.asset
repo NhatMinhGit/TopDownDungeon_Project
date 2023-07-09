@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dffcb1ca89cc0fc4090beeb2936df221, type: 3}
+  m_Name: Gody's Axe
+  m_EditorClassIdentifier: 
+  <IsStackable>k__BackingField: 0
+  <MaxStackSize>k__BackingField: 1
+  <Name>k__BackingField: Gody's Axe
+  <Description>k__BackingField: Handmade by Minh
+  <ItemImage>k__BackingField: {fileID: -7821474621711406873, guid: 49f53585e202e984bb721a473b960c2f, type: 3}
+  <DefaultParametersList>k__BackingField:
+  - itemParameter: {fileID: 11400000, guid: 05bebe94c1ba0df4b9bc7e21f169ae6a, type: 2}
+    value: 50
+  <dropChance>k__BackingField: 70
+  <actionSFX>k__BackingField: {fileID: 8300000, guid: 8563c118cea3a7c4791f849da1562bc0, type: 3}

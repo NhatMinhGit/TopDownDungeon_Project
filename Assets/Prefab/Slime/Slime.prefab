@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1990895049
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -1083815700, guid: 5fb0f3967d7064a44bcbe0b868a5562e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -140,7 +140,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -158,8 +158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21588ab38fb49874581efccb7529eaa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 1
-  Damage: 1
   player: {fileID: 1054543793713698326, guid: a4dea6c29ed64694baef38426388c4d7, type: 3}
   portal: {fileID: 7586948141576755414, guid: 6b1362efcad260642a40a3a59560e484, type: 3}
   _enemyData: {fileID: 11400000, guid: 25c28c092cdc79b4fb77e3f35dc47809, type: 2}
@@ -179,4 +177,9 @@ MonoBehaviour:
   lootList:
   - {fileID: 11400000, guid: f89398fdda0b85444bd1671d6c09121d, type: 2}
   - {fileID: 11400000, guid: 86b7784c486710c4f905b12f6820fbc3, type: 2}
-  - {fileID: 11400000, guid: e63450c6d9839bb45bc9717625e814b3, type: 2}
+  - {fileID: 11400000, guid: 702b324b5bbc132499dc85b0dbba91cc, type: 2}
+  - {fileID: 11400000, guid: 88e1ec548b50efe4584ebf3030afe32c, type: 2}
+  - {fileID: 11400000, guid: 4473312880328e34ba060681479bbea5, type: 2}
+  - {fileID: 11400000, guid: 8009754ac3acc9844af1402355fdc3cc, type: 2}
+  - {fileID: 11400000, guid: 5b77840fc0afe1d4bbca12062c6d8ca2, type: 2}
+  - {fileID: 11400000, guid: 61d1551fe78438e4eb44e9d84e43032a, type: 2}
