@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : Singleton<PlayerController>
+public class PlayerController : MonoBehaviour
+    //Singleton<PlayerController>
 {
     [SerializeField] GameObject dieMenu;
 
     [SerializeField] PlayerData _playerData;
 
-    public float moveSpeed = 1f;
 
     public float collisionOffset = 0.05f;
 
@@ -26,7 +26,7 @@ public class PlayerController : Singleton<PlayerController>
     //Khai báo animation
     Animator animator;
 
-    List<RaycastHit2D> castCollisons = new List<RaycastHit2D>();//
+    List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();//
 
     bool canMove = true;
 
@@ -60,12 +60,12 @@ public class PlayerController : Singleton<PlayerController>
             if (movementInput != Vector2.zero)
             {
                 bool success = TryMove(movementInput);
-
+                
                 //---Trượt qua bề mặt ngăn cản ---//
-                if (!success && movementInput.x > 0 /* movementInput.x > 0 dùng để xác định có vật để dùng animation lại*/ )
+                if (!success && movementInput.x > 0 /* movementInput.x > 0 dùng để xác định có vật thể để dừng animation lại*/ )
                 {
                     success = TryMove(new Vector2(movementInput.x, 0));
-
+                 
                     if (!success)
                     {
                         success = TryMove(new Vector2(0, movementInput.y));
@@ -106,14 +106,14 @@ public class PlayerController : Singleton<PlayerController>
         {
             //Di chuyen
 
-            int count = rb.Cast(direction, movementFilter, castCollisons, moveSpeed * Time.fixedDeltaTime + collisionOffset);
+            int count = rb.Cast(direction, movementFilter, castCollisions, _playerData.moveSpeed * Time.fixedDeltaTime + collisionOffset);
             
         
 
             if (count == 0)
             {
          
-                rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+                rb.MovePosition(rb.position + direction * _playerData.moveSpeed * Time.fixedDeltaTime);
                 return true;
             }
             else

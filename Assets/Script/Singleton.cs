@@ -21,7 +21,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             return _instant;
         }
     }
-    /*
+    
     void Awake()
     {
         if (_instant != null && _instant.gameObject.GetInstanceID() != this.gameObject.GetInstanceID())
@@ -31,7 +31,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
         else
             _instant = this.GetComponent<T>();
-    }*/
+    }
 
 
 }

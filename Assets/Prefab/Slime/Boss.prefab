@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6534053439828880152}
   - component: {fileID: 6534053439828880153}
   - component: {fileID: 5698764834233518647}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Boss
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.008220154, y: -0.26561272}
@@ -160,6 +160,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1054543793713698326, guid: a4dea6c29ed64694baef38426388c4d7, type: 3}
   portal: {fileID: 7586948141576755414, guid: 6b1362efcad260642a40a3a59560e484, type: 3}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
   _enemyData: {fileID: 11400000, guid: ac0a56edbe58ed949b322c0ca4807b05, type: 2}
 --- !u!114 &5698764834233518647
 MonoBehaviour:
@@ -173,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd8981140f8752841b2335dc82c0d5c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  droppedItemPrefab: {fileID: 934855421590841986, guid: 355aec8494cf0104c9da3420771432ff, type: 3}
+  droppedItemPrefab: {fileID: 6729472019622637519, guid: 14796dc77c91385479dd5cf59782b18e, type: 3}
   lootList:
   - {fileID: 11400000, guid: f89398fdda0b85444bd1671d6c09121d, type: 2}
   - {fileID: 11400000, guid: 702b324b5bbc132499dc85b0dbba91cc, type: 2}

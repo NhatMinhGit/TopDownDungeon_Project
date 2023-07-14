@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3425721474987864675}
   - component: {fileID: 3425721474987864672}
   - component: {fileID: 6893128285533414133}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CloseWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 3425721476624697740}
   - component: {fileID: 3425721476624697742}
   - component: {fileID: 3425721476624697743}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 3425721476672307086}
   - component: {fileID: 3425721476672307087}
   - component: {fileID: 3425721476672307084}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

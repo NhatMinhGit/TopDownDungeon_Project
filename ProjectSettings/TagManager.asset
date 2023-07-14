@@ -18,9 +18,9 @@ TagManager:
   - Postpossesing
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
+  - Wall
   - 
   - 
   - 

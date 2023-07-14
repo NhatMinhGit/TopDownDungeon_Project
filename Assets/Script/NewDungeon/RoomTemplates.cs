@@ -19,6 +19,7 @@ public class RoomTemplates : MonoBehaviour {
 	public GameObject boss;
 	public GameObject portal;
 	private GameObject IsBossAlive;
+	private bool spawnedPortal = false;
 
 	void Update(){
 
@@ -26,19 +27,16 @@ public class RoomTemplates : MonoBehaviour {
 			for (int i = 0; i < rooms.Count; i++) {
 				if(i == rooms.Count-1){
 					Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
-					roomNumber = i;
+					Instantiate(portal, rooms[i].transform.position, Quaternion.identity);
 					spawnedBoss = true;
 				}
-				/*IsBossAlive = GameObject.FindGameObjectWithTag("Boss");
-				if (IsBossAlive == null)
-				{
-					Instantiate(portal, rooms[roomNumber].transform.position, Quaternion.identity);
-				}*/
+
+				
+				
 			}
 		} else {
 			waitTime -= Time.deltaTime;
 		}
-		
 	}
 	
 }
