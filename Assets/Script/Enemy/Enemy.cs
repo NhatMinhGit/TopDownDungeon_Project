@@ -98,6 +98,6 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         //GetComponent<LootBag>().SpawnLoot(this.transform.position);
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
 }

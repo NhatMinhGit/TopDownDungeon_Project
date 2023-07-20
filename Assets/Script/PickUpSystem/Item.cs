@@ -29,7 +29,7 @@ public class Item : MonoBehaviour
 
     }
 
-    private IEnumerator AnimateItemPickup()
+    private IEnumerator AnimateItemPickup()//!
     {
         audioSource.Play();
         Vector3 startScale = transform.localScale;
@@ -38,10 +38,9 @@ public class Item : MonoBehaviour
         while (currentTime < duration)
         {
             currentTime += Time.deltaTime;
-            transform.localScale =
-                Vector3.Lerp(startScale, endScale, currentTime / duration);
+            transform.localScale = Vector3.Lerp(startScale, endScale, currentTime / duration);
             yield return null;
         }
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 }

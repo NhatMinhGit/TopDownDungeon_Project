@@ -29,18 +29,18 @@ namespace Inventory.UI
             ResetData();
             Deselect();
         }
+        public void ResetData()
+        {
+            itemImage.gameObject.SetActive(false);
+            empty = true;
+        }
 
         public void Deselect()
         {
             borderImage.enabled = false;
         }
 
-        public void ResetData()
-        {
-            itemImage.gameObject.SetActive(true);
-            empty = true;
-        }
-
+        
         public void SetData(Sprite sprite, int quantity)
         {
             itemImage.gameObject.SetActive(true);
@@ -54,14 +54,16 @@ namespace Inventory.UI
             borderImage.enabled = true;
         }
 
-        public void OnDrag(PointerEventData eventData)
+        public void OnPointerClick(PointerEventData pointerData)
         {
-
-        }
-
-        public void OnDrop(PointerEventData eventData)
-        {
-            OnItemDroppedOn?.Invoke(this);
+            if (pointerData.button == PointerEventData.InputButton.Right)
+            {
+                OnRightMouseBtnClick?.Invoke(this);
+            }
+            else
+            {
+                OnItemClicked?.Invoke(this);
+            }
         }
 
         public void OnEndDrag(PointerEventData eventData)
@@ -76,16 +78,20 @@ namespace Inventory.UI
             OnItemBeginDrag?.Invoke(this);
         }
 
-        public void OnPointerClick(PointerEventData pointerData)
+        public void OnDrag(PointerEventData eventData)
         {
-            if (pointerData.button == PointerEventData.InputButton.Right)
-            {
-                OnRightMouseBtnClick?.Invoke(this);
-            }
-            else
-            {
-                OnItemClicked?.Invoke(this);
-            }
+
         }
+
+        public void OnDrop(PointerEventData eventData)
+        {
+            OnItemDroppedOn?.Invoke(this);
+        }
+
+        
+
+        
+
+        
     }
 }

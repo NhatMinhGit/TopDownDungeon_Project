@@ -47,8 +47,7 @@ namespace Inventory
             inventoryUI.ResetAllItems();
             foreach (var item in inventoryState)
             {
-                inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage,
-                    item.Value.quantity);
+                inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage,item.Value.quantity);
             }
         }
 
@@ -134,8 +133,7 @@ namespace Inventory
             }
             ItemSO item = inventoryItem.item;
             string description = PrepareDescription(inventoryItem);
-            inventoryUI.UpdateDescription(itemIndex, item.ItemImage,
-                item.name, description);
+            inventoryUI.UpdateDescription(itemIndex, item.ItemImage,item.name, description);
         }
 
         private string PrepareDescription(InventoryItem inventoryItem)
@@ -162,9 +160,7 @@ namespace Inventory
                     inventoryUI.Show();
                     foreach (var item in inventoryData.GetCurrentInventoryState())
                     {
-                        inventoryUI.UpdateData(item.Key,
-                            item.Value.item.ItemImage,
-                            item.Value.quantity);
+                        inventoryUI.UpdateData(item.Key,item.Value.item.ItemImage,item.Value.quantity);
                     }
                 }
                 else
